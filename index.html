@@ -15,5 +15,22 @@
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, fuga!
         </p>
+        {% paginate elements as pageInfo, pageEntries %}
+
+            {% for item in pageEntries %}
+
+            {% endfor %}
+
+            {% if pageInfo.prevUrl %}
+                <a href="{{ pageInfo.prevUrl }}">
+                    Previous Page
+                </a>
+            {% endif %}
+            {% if pageInfo.nextUrl %}
+                <a href="{{ pageInfo.nextUrl }}">
+                    Next Page
+                </a>
+            {% endif %}
+        </body>
     </body>
 </html>
